@@ -14,7 +14,7 @@ public class AppointmentService {
         this.appointmentRepository = appointmentRepository;
     }
 
-    // Método para eliminar una cita por ID
+    // Method to delete an appointment by ID
     public void deleteAppointment(Long appointmentId) {
         appointmentRepository.deleteById(appointmentId);
     }
