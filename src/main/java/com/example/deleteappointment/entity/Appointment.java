@@ -9,28 +9,28 @@ import java.time.LocalTime;
 public class Appointment {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // Auto-generated ID
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // ID autogenerado
     private Long id;
 
-    @Column(name = "patient_id", nullable = false) // Patient ID
+    @Column(name = "patient_id", nullable = false) // ID del paciente
     private Long patientId;
 
-    @Column(name = "doctor_id", nullable = false) // Doctor ID
+    @Column(name = "doctor_id", nullable = false) // ID del doctor
     private Long doctorId;
 
-    @Column(name = "appointment_date", nullable = false) // Date of appointment
+    @Column(name = "appointment_date", nullable = false) // Fecha de la cita
     private LocalDate appointmentDate;
 
-    @Column(name = "appointment_time", nullable = false) // Appointment time
+    @Column(name = "appointment_time", nullable = false) // Hora de la cita
     private LocalTime appointmentTime;
 
-    @Column(nullable = false) // Appointment status
+    @Column(nullable = false) // Estado de la cita
     private String status;
 
-    // Empty constructor (required by JPA)
+    // Constructor vacío (requerido por JPA)
     public Appointment() {}
 
-    // Constructor with parameters
+    // Constructor con parámetros
     public Appointment(Long patientId, Long doctorId, LocalDate appointmentDate, LocalTime appointmentTime, String status) {
         this.patientId = patientId;
         this.doctorId = doctorId;
